@@ -25,21 +25,25 @@ public class MainActivity extends AppCompatActivity {
         textView=findViewById(R.id.textView2);
         editText=findViewById(R.id.editTextText);
         //
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //
-                Toast.makeText(MainActivity.this, "Button Pressed", Toast.LENGTH_SHORT).show();
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //
+//                Toast.makeText(MainActivity.this, "Button Pressed", Toast.LENGTH_SHORT).show();
+//
+//                String s= editText.getText().toString();
+//                int Kg=Integer.parseInt(s);
+//                double pound=2.205*Kg;
+//                textView.setText("The Value is "+pound);
+//
+//            }
+//        });
+    }
 
-                String s= editText.getText().toString();
-                int Kg=Integer.parseInt(s);
-                double pound=2.205*Kg;
-                textView.setText("The Value is "+pound);
-
-            }
-        });
-
-
-
+    public void calculate(View view){
+        String s= editText.getText().toString();
+        int Kg=Integer.parseInt(s);
+        double pound=2.205*Kg;
+        textView.setText("The Value is "+pound);
     }
 }
